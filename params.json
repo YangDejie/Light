@@ -1,0 +1,6 @@
+{
+  "name": "Light",
+  "tagline": "finger counter via Android camera",
+  "body": "# Light\r\n\r\n**A homework  designed for the Lesson HMI**     \r\n\r\n[Demo APK](https://github.com/YangDejie/Light/releases/download/v1.0.0/app-release.apk)\r\n\r\n## Components\r\n\r\n### Widgets\r\n\r\n- TextView\r\n\r\n### Layouts\r\n\r\n- DrawerLayout\r\n- RelativeLayout\r\n- LinearLayout\r\n- TableLayout\r\n- FragmentLayout\r\n\r\n### Containers\r\n\r\n- Navigation View\r\n- include\r\n- ListView\r\n- ScrollView\r\n\r\n### Images\r\n\r\n- ImageView\r\n- ImageButton\r\n\r\n### Custom\r\n\r\n- AppBarLayout\r\n- FloatingActionButton\r\n- LightDashBoard View\r\n- PullScrollView\r\n- fragment\r\n\r\n## Usage\r\n\r\n**Tools:** Android Studio 2.2.2\r\n\r\n```bash\r\ngit clone https://github.com/YangDejie/Light.git develop\r\n```\r\n\r\n## Contact\r\n\r\n- i@idejie.com\r\n\r\n## Lisence\r\n\r\n[MIT](https://github.com/YangDejie/Light/blob/develop/LISENCE) \r\n\r\nCopyright  (c) YangDejie\r\n\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
