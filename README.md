@@ -1,6 +1,8 @@
 # Light
 
-**A homework  designed for the Lesson HMI**[Demo APK](https://github.com/YangDejie/Light/releases/download/v1.0.0/app-release.apk)
+**A homework  designed for the Lesson HMI**     
+
+[Demo APK](https://github.com/YangDejie/Light/releases/download/v1.0.0/app-release.apk)
 
 ## Components
 
@@ -38,7 +40,7 @@
 
 ## Usage
 
-**Tools:** Android Studio 2.3
+**Tools:** Android Studio 2.2.2
 
 ```bash
 git clone https://github.com/YangDejie/Light.git develop
