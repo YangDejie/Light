@@ -16,6 +16,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.idejie.android.light.fragment.CameraFragment;
 import com.idejie.android.light.fragment.IndexFragment;
@@ -174,7 +175,9 @@ public class MainActivity extends AppCompatActivity
             showFragment(LIGHT);
 
         } else if (id == R.id.nav_slideshow) {
+
             showFragment(CAMERA);
+            Toast.makeText(this,""+CAMERA,Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_share) {

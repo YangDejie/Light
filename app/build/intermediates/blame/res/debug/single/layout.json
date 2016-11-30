@@ -44,12 +44,12 @@
         "source": "/Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/exploded-aar/com.android.support/design/25.0.0/res/layout/design_layout_tab_text.xml"
     },
     {
-        "merged": "/Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view.xml",
-        "source": "/Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/layout/abc_activity_chooser_view.xml"
-    },
-    {
         "merged": "/Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/res/merged/debug/layout/notification_template_big_media_custom.xml",
         "source": "/Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/layout/notification_template_big_media_custom.xml"
+    },
+    {
+        "merged": "/Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view.xml",
+        "source": "/Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/layout/abc_activity_chooser_view.xml"
     },
     {
         "merged": "/Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/res/merged/debug/layout/design_navigation_item_header.xml",
