@@ -10,11 +10,21 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        externalNativeBuild {
+            cmake {
+                cppFlags ""
+            }
+        }
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
         }
     }
     sourceSets { main { jni.srcDirs = ['src/main/jni', 'src/main/jni/'] } }
@@ -30,6 +40,7 @@ dependencies {
             url "http://dl.bintray.com/dasar/maven"
         }
     }
+    compile project(':openCVLibrary310')
     compile 'uz.shift:colorpicker:0.5@aar'
     compile 'com.android.support:appcompat-v7:24.1.1'
     compile 'com.android.support:design:24.1.1'
@@ -37,5 +48,4 @@ dependencies {
     compile 'com.github.alamkanak:android-week-view:1.2.6'
     compile 'com.yalantis:flipviewpager:1.0.0'
     testCompile 'junit:junit:4.12'
-    compile project(':openCVLibrary310')
 }
