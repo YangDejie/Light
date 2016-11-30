@@ -17,6 +17,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.idejie.android.light.fragment.CameraFragment;
 import com.idejie.android.light.fragment.IndexFragment;
 import com.idejie.android.light.fragment.LightFragment;
 import com.idejie.android.light.fragment.MeFragment;
@@ -31,9 +32,10 @@ public class MainActivity extends AppCompatActivity
     IndexFragment indexFragment;
     MeFragment meFragment;
     LightFragment lightFragment;
+    CameraFragment cameraFragment;
     Toolbar toolbar;
     int postion;
-    final int INDEX=0,LIGHT=1,ME=3;
+    final int INDEX=0,LIGHT=1,CAMERA=2,ME=3;
     FragmentManager fm ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -113,6 +115,14 @@ public class MainActivity extends AppCompatActivity
                     transaction.show(meFragment);
                 }
                 break;
+            case CAMERA:
+                toolbar.setTitle("识别");
+                if (cameraFragment==null){
+                    cameraFragment=new CameraFragment();
+                    transaction.add(R.id.fragment_main,cameraFragment);
+                }else {
+                    transaction.show(cameraFragment);
+                }
         }
 
         transaction.commit();
@@ -164,7 +174,7 @@ public class MainActivity extends AppCompatActivity
             showFragment(LIGHT);
 
         } else if (id == R.id.nav_slideshow) {
-
+            showFragment(CAMERA);
         } else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_share) {
@@ -181,6 +191,7 @@ public class MainActivity extends AppCompatActivity
         if (meFragment!=null) ft.hide(meFragment);
         if (lightFragment!=null)ft.hide(lightFragment);
         if (indexFragment!=null) ft.hide(indexFragment);
+        if (cameraFragment!=null) ft.hide(cameraFragment);
 
     }
 

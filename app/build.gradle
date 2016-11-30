@@ -27,7 +27,11 @@ android {
             path "CMakeLists.txt"
         }
     }
-    sourceSets { main { jni.srcDirs = ['src/main/jni', 'src/main/jni/'] } }
+    sourceSets {
+        main() {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
 }
 
 dependencies {
@@ -35,17 +39,8 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    repositories {
-        maven {
-            url "http://dl.bintray.com/dasar/maven"
-        }
-    }
-    compile project(':openCVLibrary310')
-    compile 'uz.shift:colorpicker:0.5@aar'
-    compile 'com.android.support:appcompat-v7:24.1.1'
-    compile 'com.android.support:design:24.1.1'
-    compile 'com.android.support:support-v4:24.1.1'
-    compile 'com.github.alamkanak:android-week-view:1.2.6'
-    compile 'com.yalantis:flipviewpager:1.0.0'
+    compile 'com.android.support:appcompat-v7:24.2.1'
     testCompile 'junit:junit:4.12'
+    compile project(':openCVLibrary310')
+    compile 'com.android.support:design:25.0.0'
 }
