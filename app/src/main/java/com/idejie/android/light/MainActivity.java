@@ -1,5 +1,9 @@
 package com.idejie.android.light;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -13,22 +17,42 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.idejie.android.light.fragment.IndexFragment;
+import com.idejie.android.light.fragment.LightFragment;
+import com.idejie.android.light.fragment.MeFragment;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
+    private SimpleDateFormat formater = new SimpleDateFormat("yyyy年MM月dd日-HH:mm:ss");
+    public static final String POSITION = "position";
+    IndexFragment indexFragment;
+    MeFragment meFragment;
+    LightFragment lightFragment;
+    Toolbar toolbar;
+    int postion;
+    final int INDEX=0,LIGHT=1,ME=3;
+    FragmentManager fm ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "欢迎前往github进行star", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+                Intent data=new Intent(Intent.ACTION_SENDTO);
+                data.setData(Uri.parse("mailto:i@idejie.com"));
+                data.putExtra(Intent.EXTRA_SUBJECT, "关于Light的意见反馈");
+                data.putExtra(Intent.EXTRA_TEXT, "我在"+formater.format(new Date())+"发现了一个Bug：\n");
+                startActivity(data);
             }
         });
 
@@ -40,6 +64,59 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        fm = getFragmentManager();
+        showFragment(1);
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        outState.putInt(POSITION,postion);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        showFragment(savedInstanceState.getInt("position"));
+        super.onRestoreInstanceState(savedInstanceState);
+    }
+
+    private void showFragment(int i) {
+
+        FragmentTransaction transaction =fm.beginTransaction();
+        hideFragment(transaction);
+        postion =i;
+        switch (postion){
+            case INDEX:
+                toolbar.setTitle("首页");
+                if (indexFragment==null){
+                    indexFragment=new IndexFragment();
+                    transaction.add(R.id.fragment_main,indexFragment);
+                }else {
+                    transaction.show(indexFragment);
+                }
+                break;
+            case LIGHT:
+                toolbar.setTitle("亮度");
+                if (lightFragment==null){
+                    lightFragment=new LightFragment();
+                    transaction.add(R.id.fragment_main,lightFragment);
+                }else {
+                    transaction.show(lightFragment);
+                }
+                break;
+            case ME:
+                toolbar.setTitle("我的");
+                if (meFragment==null){
+                    meFragment=new MeFragment();
+                    transaction.add(R.id.fragment_main,meFragment);
+                }else {
+                    transaction.show(meFragment);
+                }
+                break;
+        }
+
+        transaction.commit();
+
     }
 
     @Override
@@ -77,12 +154,14 @@ public class MainActivity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
+
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-            // Handle the camera action
+            showFragment(INDEX);
         } else if (id == R.id.nav_gallery) {
+            showFragment(LIGHT);
 
         } else if (id == R.id.nav_slideshow) {
 
@@ -90,12 +169,20 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_share) {
 
-        } else if (id == R.id.nav_send) {
-
+        } else if (id == R.id.nav_setting) {
+            showFragment(ME);
         }
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    private void hideFragment(FragmentTransaction ft) {
+        if (meFragment!=null) ft.hide(meFragment);
+        if (lightFragment!=null)ft.hide(lightFragment);
+        if (indexFragment!=null) ft.hide(indexFragment);
+
+    }
+
+
 }
