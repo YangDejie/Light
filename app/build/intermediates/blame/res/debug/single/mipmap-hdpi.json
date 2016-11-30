@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/res/merged/debug/mipmap-hdpi/card_avatar_bar.9.png",
+        "source": "/Users/shandongdaxue/Desktop/code/Light/app/src/main/res/mipmap-hdpi/card_avatar_bar.9.png"
+    },
+    {
+        "merged": "/Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/res/merged/debug/mipmap-hdpi/arrow_up.png",
+        "source": "/Users/shandongdaxue/Desktop/code/Light/app/src/main/res/mipmap-hdpi/arrow_up.png"
+    },
+    {
+        "merged": "/Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/res/merged/debug/mipmap-hdpi/avatar_default.png",
+        "source": "/Users/shandongdaxue/Desktop/code/Light/app/src/main/res/mipmap-hdpi/avatar_default.png"
+    },
+    {
+        "merged": "/Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_launcher.png",
+        "source": "/Users/shandongdaxue/Desktop/code/Light/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    }
+]

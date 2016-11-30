@@ -1,0 +1,66 @@
+[
+    {
+        "merged": "/Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/res/merged/debug/drawable-v21/selector_btn.xml",
+        "source": "/Users/shandongdaxue/Desktop/code/Light/app/src/main/res/drawable-v21/selector_btn.xml"
+    },
+    {
+        "merged": "/Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/res/merged/debug/drawable-v21/add.png",
+        "source": "/Users/shandongdaxue/Desktop/code/Light/app/src/main/res/drawable-v21/add.png"
+    },
+    {
+        "merged": "/Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/res/merged/debug/drawable-v21/ic_menu_gallery.xml",
+        "source": "/Users/shandongdaxue/Desktop/code/Light/app/src/main/res/drawable-v21/ic_menu_gallery.xml"
+    },
+    {
+        "merged": "/Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/res/merged/debug/drawable-v21/ic_menu_share.xml",
+        "source": "/Users/shandongdaxue/Desktop/code/Light/app/src/main/res/drawable-v21/ic_menu_share.xml"
+    },
+    {
+        "merged": "/Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/res/merged/debug/drawable-v21/ic_menu_send.xml",
+        "source": "/Users/shandongdaxue/Desktop/code/Light/app/src/main/res/drawable-v21/ic_menu_send.xml"
+    },
+    {
+        "merged": "/Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/res/merged/debug/drawable-v21/notification_action_background.xml",
+        "source": "/Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/drawable-v21/notification_action_background.xml"
+    },
+    {
+        "merged": "/Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/res/merged/debug/drawable-v21/button_bg_normal.9.png",
+        "source": "/Users/shandongdaxue/Desktop/code/Light/app/src/main/res/drawable-v21/button_bg_normal.9.png"
+    },
+    {
+        "merged": "/Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/res/merged/debug/drawable-v21/abc_action_bar_item_background_material.xml",
+        "source": "/Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/drawable-v21/abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "/Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/res/merged/debug/drawable-v21/ic_menu_slideshow.xml",
+        "source": "/Users/shandongdaxue/Desktop/code/Light/app/src/main/res/drawable-v21/ic_menu_slideshow.xml"
+    },
+    {
+        "merged": "/Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/res/merged/debug/drawable-v21/design_bottom_navigation_item_background.xml",
+        "source": "/Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/exploded-aar/com.android.support/design/25.0.0/res/drawable-v21/design_bottom_navigation_item_background.xml"
+    },
+    {
+        "merged": "/Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/res/merged/debug/drawable-v21/abc_edit_text_material.xml",
+        "source": "/Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/drawable-v21/abc_edit_text_material.xml"
+    },
+    {
+        "merged": "/Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/res/merged/debug/drawable-v21/ic_menu_camera.xml",
+        "source": "/Users/shandongdaxue/Desktop/code/Light/app/src/main/res/drawable-v21/ic_menu_camera.xml"
+    },
+    {
+        "merged": "/Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/res/merged/debug/drawable-v21/button_bg_pressed.9.png",
+        "source": "/Users/shandongdaxue/Desktop/code/Light/app/src/main/res/drawable-v21/button_bg_pressed.9.png"
+    },
+    {
+        "merged": "/Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/res/merged/debug/drawable-v21/ic_menu_manage.xml",
+        "source": "/Users/shandongdaxue/Desktop/code/Light/app/src/main/res/drawable-v21/ic_menu_manage.xml"
+    },
+    {
+        "merged": "/Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/res/merged/debug/drawable-v21/card_whole.9.png",
+        "source": "/Users/shandongdaxue/Desktop/code/Light/app/src/main/res/drawable-v21/card_whole.9.png"
+    },
+    {
+        "merged": "/Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/res/merged/debug/drawable-v21/abc_btn_colored_material.xml",
+        "source": "/Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/drawable-v21/abc_btn_colored_material.xml"
+    }
+]
