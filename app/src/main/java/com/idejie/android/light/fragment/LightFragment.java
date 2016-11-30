@@ -15,7 +15,6 @@ import android.view.ViewGroup;
 
 import com.idejie.android.light.MainActivity;
 import com.idejie.android.light.R;
-import com.idejie.android.light.widget.HighlightCR;
 import com.idejie.android.light.widget.LightDashboardView;
 
 import java.util.ArrayList;
