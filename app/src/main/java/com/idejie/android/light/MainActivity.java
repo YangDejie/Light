@@ -1,71 +1,188 @@
 package com.idejie.android.light;
 
-import android.support.v7.app.AppCompatActivity;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+import android.view.View;
+import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 
-import com.idejie.android.light.widget.SesameCreditPanel;
-import com.idejie.android.light.widget.SesameItemModel;
-import com.idejie.android.light.widget.SesameModel;
+import com.idejie.android.light.fragment.IndexFragment;
+import com.idejie.android.light.fragment.LightFragment;
+import com.idejie.android.light.fragment.MeFragment;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 
-public class MainActivity extends AppCompatActivity {
-    private SimpleDateFormat formater = new SimpleDateFormat("yyyy.MM.dd");
-    private SesameCreditPanel panel;
-    SesameModel model;
+public class MainActivity extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener {
+    private SimpleDateFormat formater = new SimpleDateFormat("yyyy年MM月dd日-HH:mm:ss");
+    public static final String POSITION = "position";
+    IndexFragment indexFragment;
+    MeFragment meFragment;
+    LightFragment lightFragment;
+    Toolbar toolbar;
+    int postion;
+    final int INDEX=0,LIGHT=1,ME=3;
+    FragmentManager fm ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        panel= (SesameCreditPanel) findViewById(R.id.panel);
-        model= getData(300);
-        model.setAssess("亮瞎眼！");
-        panel.setDataModel(model);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "欢迎前往github进行star", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+                Intent data=new Intent(Intent.ACTION_SENDTO);
+                data.setData(Uri.parse("mailto:i@idejie.com"));
+                data.putExtra(Intent.EXTRA_SUBJECT, "关于Light的意见反馈");
+                data.putExtra(Intent.EXTRA_TEXT, "我在"+formater.format(new Date())+"发现了一个Bug：\n");
+                startActivity(data);
+            }
+        });
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.setDrawerListener(toggle);
+        toggle.syncState();
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
+        fm = getFragmentManager();
+        showFragment(1);
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        outState.putInt(POSITION,postion);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        showFragment(savedInstanceState.getInt("position"));
+        super.onRestoreInstanceState(savedInstanceState);
+    }
+
+    private void showFragment(int i) {
+
+        FragmentTransaction transaction =fm.beginTransaction();
+        hideFragment(transaction);
+        postion =i;
+        switch (postion){
+            case INDEX:
+                toolbar.setTitle("首页");
+                if (indexFragment==null){
+                    indexFragment=new IndexFragment();
+                    transaction.add(R.id.fragment_main,indexFragment);
+                }else {
+                    transaction.show(indexFragment);
+                }
+                break;
+            case LIGHT:
+                toolbar.setTitle("亮度");
+                if (lightFragment==null){
+                    lightFragment=new LightFragment();
+                    transaction.add(R.id.fragment_main,lightFragment);
+                }else {
+                    transaction.show(lightFragment);
+                }
+                break;
+            case ME:
+                toolbar.setTitle("我的");
+                if (meFragment==null){
+                    meFragment=new MeFragment();
+                    transaction.add(R.id.fragment_main,meFragment);
+                }else {
+                    transaction.show(meFragment);
+                }
+                break;
+        }
+
+        transaction.commit();
 
     }
-    private SesameModel getData(int i) {
-        SesameModel model = new SesameModel();
-        model.setTotalMin(0);
-        model.setTotalMax(10000);
-        model.setFirstText("测试版");
-        model.setTopText("光线感应测试");
-        model.setFourText("测量时间:" + formater.format(new Date()));
-        ArrayList<SesameItemModel> sesameItemModels = new ArrayList<SesameItemModel>();
 
-        SesameItemModel ItemModel350 = new SesameItemModel();
-        ItemModel350.setArea("很暗");
-        ItemModel350.setMin(0);
-        ItemModel350.setMax(10);
-        sesameItemModels.add(ItemModel350);
-
-        SesameItemModel ItemModel550 = new SesameItemModel();
-        ItemModel550.setArea("正常");
-        ItemModel550.setMin(10);
-        ItemModel550.setMax(100);
-        sesameItemModels.add(ItemModel550);
-
-        SesameItemModel ItemModel600 = new SesameItemModel();
-        ItemModel600.setArea("较亮");
-        ItemModel600.setMin(100);
-        ItemModel600.setMax(2000);
-        sesameItemModels.add(ItemModel600);
-
-        SesameItemModel ItemModel650 = new SesameItemModel();
-        ItemModel650.setArea("很亮");
-        ItemModel650.setMin(2000);
-        ItemModel650.setMax(5000);
-        sesameItemModels.add(ItemModel650);
-
-        SesameItemModel ItemModel700 = new SesameItemModel();
-        ItemModel700.setArea("亮瞎眼");
-        ItemModel700.setMin(5000);
-        ItemModel700.setMax(10000);
-        sesameItemModels.add(ItemModel700);
-
-        model.setSesameItemModels(sesameItemModels);
-        model.setUserTotal(i);
-        return model;
+    @Override
+    public void onBackPressed() {
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+
+        // Handle navigation view item clicks here.
+        int id = item.getItemId();
+
+        if (id == R.id.nav_camera) {
+            showFragment(INDEX);
+        } else if (id == R.id.nav_gallery) {
+            showFragment(LIGHT);
+
+        } else if (id == R.id.nav_slideshow) {
+
+        } else if (id == R.id.nav_manage) {
+
+        } else if (id == R.id.nav_share) {
+
+        } else if (id == R.id.nav_setting) {
+            showFragment(ME);
+        }
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
+
+    private void hideFragment(FragmentTransaction ft) {
+        if (meFragment!=null) ft.hide(meFragment);
+        if (lightFragment!=null)ft.hide(lightFragment);
+        if (indexFragment!=null) ft.hide(indexFragment);
+
+    }
+
+
 }

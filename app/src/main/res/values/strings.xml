@@ -1,3 +1,17 @@
 <resources>
-    <string name="app_name">Light</string>
+    <string name="app_name">Lighter</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_me">MeActivity</string>
+    <string name="add_attention">加关注</string>
+    <string name="user_post">2014级软件工程学生</string>
+    <string name="user_name">宋双兵</string>
+    <string name="user_des">一辈子很长,要和有趣的人在一起才会快乐🍀比如说我🌸🌸。</string>
+    <string name="user_recommend_tip">Ta推荐的好书</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
