@@ -37,7 +37,7 @@ MERGED from [com.android.support:transition:25.0.0] /Users/shandongdaxue/Desktop
 	android:allowBackup
 		ADDED from /Users/shandongdaxue/Desktop/code/Light/app/src/main/AndroidManifest.xml:8:9-35
 	android:icon
-		ADDED from /Users/shandongdaxue/Desktop/code/Light/app/src/main/AndroidManifest.xml:9:9-43
+		ADDED from /Users/shandongdaxue/Desktop/code/Light/app/src/main/AndroidManifest.xml:9:9-47
 	android:theme
 		ADDED from /Users/shandongdaxue/Desktop/code/Light/app/src/main/AndroidManifest.xml:12:9-52
 activity#com.idejie.android.light.WellcomeActivity

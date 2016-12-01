@@ -12,6 +12,14 @@
         "source": "/Users/shandongdaxue/Desktop/code/Light/app/src/main/res/mipmap-hdpi/avatar_default.png"
     },
     {
+        "merged": "/Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/res/merged/debug/mipmap-hdpi/icon.png",
+        "source": "/Users/shandongdaxue/Desktop/code/Light/app/src/main/res/mipmap-hdpi/icon.png"
+    },
+    {
+        "merged": "/Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_launcher_app.png",
+        "source": "/Users/shandongdaxue/Desktop/code/Light/app/src/main/res/mipmap-hdpi/ic_launcher_app.png"
+    },
+    {
         "merged": "/Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_launcher.png",
         "source": "/Users/shandongdaxue/Desktop/code/Light/app/src/main/res/mipmap-hdpi/ic_launcher.png"
     }

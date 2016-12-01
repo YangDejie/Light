@@ -2,5 +2,9 @@
     {
         "merged": "/Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/ic_launcher.png",
         "source": "/Users/shandongdaxue/Desktop/code/Light/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/ic_launcher_app.png",
+        "source": "/Users/shandongdaxue/Desktop/code/Light/app/src/main/res/mipmap-xxxhdpi/ic_launcher_app.png"
     }
 ]
