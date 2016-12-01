@@ -14,4 +14,8 @@
     <string name="user_recommend_tip">Ta推荐的好书</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="title_activity_wellcome">欢迎</string>
+    <string name="dummy_button">点击进入</string>
+    <string name="dummy_content">Light</string>
 </resources>
