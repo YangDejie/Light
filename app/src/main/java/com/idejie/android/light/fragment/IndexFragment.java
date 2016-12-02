@@ -60,13 +60,14 @@ public class IndexFragment extends Fragment {
 //            mParam2 = getArguments().getString(ARG_PARAM2);
 //        }
 //    }
-
+  View view;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        view=inflater.inflate(R.layout.fragment_index, container, false);
 
-        return inflater.inflate(R.layout.fragment_index, container, false);
+        return view  ;
     }
 
 

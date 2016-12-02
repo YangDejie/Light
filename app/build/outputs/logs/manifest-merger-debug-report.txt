@@ -30,6 +30,7 @@ MERGED from [com.android.support:appcompat-v7:25.0.0] /Users/shandongdaxue/Deskt
 MERGED from [com.android.support:support-vector-drawable:25.0.0] /Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.0.0/AndroidManifest.xml:23:5-20
 MERGED from [com.android.support:animated-vector-drawable:25.0.0] /Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.0.0/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:transition:25.0.0] /Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/exploded-aar/com.android.support/transition/25.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.github.lzyzsd:jsbridge:1.0.4] /Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/exploded-aar/com.github.lzyzsd/jsbridge/1.0.4/AndroidManifest.xml:11:5-14:19
 	android:label
 		ADDED from /Users/shandongdaxue/Desktop/code/Light/app/src/main/AndroidManifest.xml:10:9-41
 	android:supportsRtl
@@ -81,6 +82,7 @@ MERGED from [com.android.support:support-vector-drawable:25.0.0] /Users/shandong
 MERGED from [com.android.support:animated-vector-drawable:25.0.0] /Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:recyclerview-v7:25.0.0] /Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.0.0/AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:transition:25.0.0] /Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/exploded-aar/com.android.support/transition/25.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.github.lzyzsd:jsbridge:1.0.4] /Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/exploded-aar/com.github.lzyzsd/jsbridge/1.0.4/AndroidManifest.xml:7:5-9:41
 	tools:overrideLibrary
 		ADDED from [com.android.support:design:25.0.0] /Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/exploded-aar/com.android.support/design/25.0.0/AndroidManifest.xml:23:9-59
 	android:targetSdkVersion

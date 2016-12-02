@@ -22,6 +22,7 @@ import com.idejie.android.light.fragment.CameraFragment;
 import com.idejie.android.light.fragment.IndexFragment;
 import com.idejie.android.light.fragment.LightFragment;
 import com.idejie.android.light.fragment.MeFragment;
+import com.idejie.android.light.fragment.ToolFragment;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -34,9 +35,10 @@ public class MainActivity extends AppCompatActivity
     MeFragment meFragment;
     LightFragment lightFragment;
     CameraFragment cameraFragment;
+    ToolFragment toolFragment;
     Toolbar toolbar;
     int postion;
-    final int INDEX=0,LIGHT=1,CAMERA=2,ME=3;
+    final int INDEX=0,LIGHT=1,CAMERA=2,ME=3,TOOL=4;
     FragmentManager fm ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -124,6 +126,16 @@ public class MainActivity extends AppCompatActivity
                 }else {
                     transaction.show(cameraFragment);
                 }
+                break;
+            case TOOL:
+                toolbar.setTitle("工具");
+                if (toolFragment==null){
+                    toolFragment=new ToolFragment();
+                    transaction.add(R.id.fragment_main,toolFragment);
+                }else {
+                    transaction.show(toolFragment);
+                }
+                break;
         }
 
         transaction.commit();
@@ -177,9 +189,9 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_slideshow) {
 
             showFragment(CAMERA);
-            Toast.makeText(this,""+CAMERA,Toast.LENGTH_LONG).show();
+//            Toast.makeText(this,""+CAMERA,Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_manage) {
-
+            showFragment(TOOL);
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_setting) {
@@ -191,10 +203,12 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void hideFragment(FragmentTransaction ft) {
+        if (indexFragment!=null) ft.hide(indexFragment);
         if (meFragment!=null) ft.hide(meFragment);
         if (lightFragment!=null)ft.hide(lightFragment);
         if (indexFragment!=null) ft.hide(indexFragment);
         if (cameraFragment!=null) ft.hide(cameraFragment);
+        if (toolFragment!=null) ft.hide(toolFragment);
 
     }
 

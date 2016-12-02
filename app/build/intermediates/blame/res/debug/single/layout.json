@@ -164,6 +164,10 @@
         "source": "/Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/layout/notification_media_cancel_action.xml"
     },
     {
+        "merged": "/Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/res/merged/debug/layout/fragment_tool.xml",
+        "source": "/Users/shandongdaxue/Desktop/code/Light/app/src/main/res/layout/fragment_tool.xml"
+    },
+    {
         "merged": "/Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/res/merged/debug/layout/select_dialog_multichoice_material.xml",
         "source": "/Users/shandongdaxue/Desktop/code/Light/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/layout/select_dialog_multichoice_material.xml"
     },

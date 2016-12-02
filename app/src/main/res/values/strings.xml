@@ -18,4 +18,5 @@
     <string name="title_activity_wellcome">Light</string>
     <string name="dummy_button">点击进入</string>
     <string name="dummy_content">Light</string>
+    <string name="button_name">Java调用Web</string>
 </resources>
